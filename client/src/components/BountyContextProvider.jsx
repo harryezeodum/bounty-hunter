@@ -46,6 +46,8 @@ function BountyContextProvider(props) {
         axios.get("/api/bounty")
             .then(response => setBountyData(response.data))
             .catch(err => console.log(err));
+        
+        navigate("/bounties");
     }
 
     function editBountyDetail(id, update) {
